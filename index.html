@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Transcription Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="controls">
+            <input type="file" id="fileInput" accept="audio/*,video/*" hidden>
+            <label for="fileInput" class="button"><i class="fas fa-file-upload"></i></label>
+            <button id="playPauseBtn" class="button"><i class="fas fa-play"></i></button>
+            <button id="rewindBtn" class="button"><i class="fas fa-backward"></i></button>
+            <button id="forwardBtn" class="button"><i class="fas fa-forward"></i></button>
+            <button id="saveBtn" class="button"><i class="fas fa-save"></i></button>
+            <button id="exportBtn" class="button"><i class="fas fa-file-export"></i></button>
+            <button id="copyBtn" class="button"><i class="fas fa-copy"></i></button>
+            <label for="volumeSlider" class="slider-label"><i class="fas fa-volume-up"></i></label>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
+            <label for="speedSlider" class="slider-label"><i class="fas fa-tachometer-alt"></i></label>
+            <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+            <button id="toggleThemeBtn" class="button"><i class="fas fa-adjust"></i></button>
+        </div>
+        <canvas id="visualizer" class="visualizer"></canvas>
+        <textarea id="transcriptArea" placeholder="Type your transcript here..."></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
